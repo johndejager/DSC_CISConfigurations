@@ -5,7 +5,7 @@ Configuration CIS_WindowsServer2016_v100_MS_lvl1 {
         )
 
     Import-DscResource -ModuleName 'NetworkingDsc'
-    Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
     Import-DscResource -ModuleName 'AuditPolicyDsc'
     Import-DscResource -ModuleName 'SecurityPolicyDsc'
 
@@ -274,7 +274,7 @@ Configuration CIS_WindowsServer2016_v100_MS_lvl1 {
             Microsoft_network_server_Digitally_sign_communications_always = 'Enabled' # 2.3.9.2 (L1) Ensure 'Microsoft network server: Digitally sign communications (always)' is set to 'Enabled'
             Microsoft_network_server_Digitally_sign_communications_if_client_agrees = 'Enabled' # 2.3.9.3 (L1) Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled'
             Microsoft_network_server_Disconnect_clients_when_logon_hours_expire = 'Enabled' # 2.3.9.4 (L1) Ensure 'Microsoft network server: Disconnect clients when logon hours expire' is set to 'Enabled'
-            Microsoft_network_server_Server_SPN_target_name_validation_level = 'Accept if provided by the client' # 2.3.9.5 (L1) Ensure 'Microsoft network server: Server SPN target name validation level' is set to 'Accept if provided by client' or higher (MS only)
+            Microsoft_network_server_Server_SPN_target_name_validation_level = 'Accept if provided by client' # 2.3.9.5 (L1) Ensure 'Microsoft network server: Server SPN target name validation level' is set to 'Accept if provided by client' or higher (MS only)
             Network_access_Allow_anonymous_SID_Name_translation = 'Disabled' # 2.3.10.1 (L1) Ensure 'Network access: Allow anonymous SID/Name translation' is set to 'Disabled'
             Network_access_Do_not_allow_anonymous_enumeration_of_SAM_accounts = 'Enabled' # 2.3.10.2 (L1) Ensure 'Network access: Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled' (MS only)
             Network_access_Do_not_allow_anonymous_enumeration_of_SAM_accounts_and_shares = 'Enabled' # 2.3.10.3 (L1) Ensure 'Network access: Do not allow anonymous enumeration of SAM accounts and shares' is set to 'Enabled' (MS only)
